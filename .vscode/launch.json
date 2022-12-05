@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'advent_of_code'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=advent_of_code",
+          "--package=advent_of_code"
+        ],
+        "filter": {
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'advent_of_code'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=advent_of_code",
+          "--package=advent_of_code"
+        ],
+        "filter": {
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
