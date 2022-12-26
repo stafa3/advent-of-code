@@ -2,8 +2,8 @@ use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
-fn main() {
-    if let Ok(lines) = read_lines("./input.txt") {
+pub fn main() {
+    if let Ok(lines) = read_lines("src/day_4/input.txt") {
         let mut total_value = 0;
         for line in lines {
             if let Ok(pairs_str) = line {

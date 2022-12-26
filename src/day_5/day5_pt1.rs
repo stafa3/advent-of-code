@@ -2,8 +2,8 @@ use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
-fn main() {
-    if let Ok(lines) = read_lines("./input.txt") {
+pub fn main() {
+    if let Ok(lines) = read_lines("src/day_5/input.txt") {
         // Parse just the crates first, put them in a data structure
         let mut vec_of_crate_stacks: Vec<Vec<char>> = vec![Vec::new(); 9];
         for line in lines {
@@ -60,7 +60,7 @@ fn main() {
         for crate_vec in vec_of_crate_stacks.iter() {
             final_value.push(*crate_vec.last().unwrap());
         }
-        println!("final_value: {}", final_value);
+        log::debug!("final_value: {}", final_value);
     }
 }
 

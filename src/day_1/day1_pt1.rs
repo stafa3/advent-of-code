@@ -2,8 +2,8 @@ use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
-fn main() {
-    if let Ok(lines) = read_lines("./input.txt") {
+pub fn main() {
+    if let Ok(lines) = read_lines("src/day_1/input.txt") {
         let mut highest_elf_num: i32 = 1;
         let mut highest_elf_calories: i32 = 0;
         let mut curr_elf_num: i32 = 1;
