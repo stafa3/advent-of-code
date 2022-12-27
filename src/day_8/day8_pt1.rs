@@ -34,8 +34,6 @@ pub fn main() {
                     left_slice.sort();
                     right_slice.sort();
 
-                    // debug!("{:?} {} {:?}", top_slice, tree_height, bottom_slice);
-
                     if tree_height > &top_slice.last().unwrap()
                         || tree_height > &bottom_slice.last().unwrap()
                         || tree_height > &left_slice.last().unwrap()
@@ -45,11 +43,6 @@ pub fn main() {
                     }
                 }
             }
-            //if tree is on an edge, add 1
-            //initialize slices of vecs for all 4 directions
-            //if tree is NOT largest in all 4 vecs
-            //add 1 to visible_tree_count
-            //return visible_tree_count
         }
         debug!("visible_trees: {}", visible_tree_count);
     }
