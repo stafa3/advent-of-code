@@ -1,5 +1,5 @@
-mod day_1;
+mod day_7;
 fn main() {
     pretty_env_logger::init();
-    day_1::day1_pt1::main();
+    day_7::day7_pt1::main();
 }
